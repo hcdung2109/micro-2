@@ -1,0 +1,31 @@
+<single-spa-router mode="hash">
+  <!--<redirect from="/" to="/login"></redirect>-->
+  <style>
+    .app-page {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .header, header {
+      width: 100%;
+    }
+  </style>
+  <div class="app-page">
+
+    <route default>
+      <redirect from="/" to="/#/login"></redirect>
+      <application name="@app/layout"></application>
+    </route>
+
+    <route path="iam">
+      <application name="@app/iam"></application>
+    </route>
+  </div>
+</single-spa-router>
